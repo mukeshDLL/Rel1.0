@@ -1,0 +1,947 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!-- $DLLHeader~Rel7.0~1.2$ -->
+<!-- "$DLLHeader~release2.2~ver1.5$" -->
+<!-- "$DLLHeader~release1.5~ver1.3$" -->
+<!--  dbdrv: exec java oracle/jrad/tools/xml/importer XMLImporter.class java &phase=dat+24 checkfile:~PROD:~PATH:~FILE &fullpath:~PROD:~PATH:~FILE -username &un_apps -password &pw_apps -dbconnection &jdbc_db_addr  -userId "1" -rootPackage /oracle/apps/~PROD  -rootdir &fullpath:~PROD:mds:directory--> 
+<!--  $XXDHeader: XxdAttributeSet.xml Rel 2.2_1.1  \oracle\src\Rel 2.2_1._1\mds\attributesets Rajesh.R Date:  21-MAR-2011 $--> 
+<package version="9.0.3.8.10_1080" xml:lang="en-US" xmlns:oa="http://xmlns.oracle.com/oa" xmlns:jrad="http://xmlns.oracle.com/jrad" xmlns:ui="http://xmlns.oracle.com/uix/ui" xmlns:user="http://xmlns.oracle.com/jrad/user" xmlns="http://xmlns.oracle.com/jrad" file-version="$Header$">
+<!--  Attribute Sets added for Gap150 START--> 
+  <attributeSet docName="ExclusionValue" comment="Exclusion Value Column of XXD_OKL_INS_EXCLN_ALL_T" dataType="VARCHAR2" maximumLength="100" prompt="Exclusion" required="no" /> 
+  <attributeSet docName="ExclusionType" comment="Exclusion Type Column of XXD_OKL_INS_EXCLN_ALL_T" dataType="VARCHAR2" maximumLength="30" prompt="Exclusion Type" required="no" /> 
+  <attributeSet docName="PlanName" comment="Plan Name Column for XXD_OKL_INS_EXCLN_PLANS_ALL_T" dataType="VARCHAR2" maximumLength="200" prompt="Plan Name" required="no" /> 
+  <attributeSet docName="InsAssetClass" comment="Ins Asset Class Column for XXD_OKL_INS_EXCLN_PLANS_ALL_T" dataType="VARCHAR2" maximumLength="80" prompt="Insurance Asset Class" required="no" /> 
+  <attributeSet docName="SBU" comment="SBU Column for XXD_OKL_INS_EXCLN_PLANS_ALL_T" dataType="VARCHAR2" maximumLength="80" prompt="SBU" required="no" /> 
+  <attributeSet docName="DealSize" comment="Deal Size Column for XXD_OKL_INS_EXCLN_PLANS_ALL_T" maximumLength="30" prompt="Deal Size" required="no" dataType="NUMBER" /> 
+  <attributeSet docName="PvtLabel" comment="Private Label Party Column for XXD_OKL_INS_EXCLN_PLANS_ALL_T" dataType="VARCHAR2" maximumLength="4000" prompt="Private Label Party" required="no" /> 
+  <attributeSet docName="ProgAgreement" comment="Program Agreement Column for XXD_OKL_INS_EXCLN_PLANS_ALL_T" dataType="VARCHAR2" maximumLength="120" prompt="Program Agreement" required="no" /> 
+  <attributeSet docName="State" comment="State Column for XXD_OKL_INS_EXCLN_PLANS_ALL_T" dataType="VARCHAR2" maximumLength="80" prompt="State" required="no" /> 
+  <attributeSet docName="SIC" comment="SIC Code Column for XXD_OKL_INS_EXCLN_PLANS_ALL_T" dataType="VARCHAR2" maximumLength="80" prompt="SIC Code" required="no" /> 
+  <attributeSet docName="Vendor" comment="Vendor Column for XXD_OKL_INS_EXCLN_PLANS_ALL_T" dataType="VARCHAR2" maximumLength="4000" prompt="Vendor" required="no" /> 
+  <attributeSet docName="WelcomeLetterTemplate" comment="Welcome Letter Template Column for XXD_OKL_INS_EXCLN_PLANS_ALL_T" dataType="VARCHAR2" maximumLength="4000" prompt="Welcome Letter Template" required="no" /> 
+  <attributeSet docName="Customer" comment="Customer Column for XXD_OKL_INS_EXCLN_PLANS_ALL_T" dataType="VARCHAR2" maximumLength="4000" prompt="Customer" required="no" /> 
+  <attributeSet docName="Sbu" prompt="SBU" comment="Prompt for DLL Business Unit." /> 
+  <attributeSet docName="OperatingUnit" comment="Prompt for Operating Unit" prompt="Operating Unit" /> 
+  <attributeSet docName="InsExclusionSearch" title="Insurance Exclusions" windowTitle="Insurance Exclusions" comment="Title for Search Insurance Exclusions Page." text="Insurance Exclusions" /> 
+  <attributeSet docName="InsExclusionCreate" windowTitle="Create Insurance Exclusion" title="Create Insurance Exclusion" text="Create Insurance Exclusion" comment="Title for Create Insurance Exclusion Page." /> 
+  <attributeSet docName="InsExclusionPlanSearch" comment="Title for Insurance Exclusion Plans Search Page." text="Insurance Exclusion Plans" windowTitle="Insurance Exclusion Plans" title="Insurance Exclusion Plans" /> 
+  <attributeSet docName="InsExclusionPlanCreate" comment="Title for Insurance Exclusion Plans Create Page." text="Create Insurnace Exclusion Plan" windowTitle="Create Insurance Exclusion Plan" title="Create Insurance Exclusion Plan" /> 
+  <attributeSet docName="EffectiveTo" comment="Effective To Date Column" dataType="DATE" maximumLength="20" prompt="Effective To" required="no" /> 
+  <attributeSet docName="EffectiveFrom" comment="Effective From Date Column" dataType="DATE" maximumLength="20" prompt="Effective From" required="no" /> 
+  <attributeSet docName="Update" comment="Update Column showing Update Icon" dataType="VARCHAR2" maximumLength="5" prompt="Update" required="no" /> 
+  <attributeSet docName="NameAttr" comment="Name Lov Column" prompt="Name" /> 
+  <attributeSet docName="NumberAttr" comment="Number Lov Column" prompt="Number" /> 
+  <attributeSet docName="Desc" comment="Name Lov Column" prompt="Description" /> 
+  <attributeSet docName="Meaning" comment="Meaning Lov Column" prompt="Meaning" /> 
+  <attributeSet docName="ProgAgrContract" comment="Program Agreement Contract No Lov Column" prompt="Program Agreement Contract No" /> 
+- <!--  Attribute Sets added for Gap150 END--> 
+- <!--  Attribute Sets added for CLSF START--> 
+  <attributeSet docName="clsfEngPhrLnk" text="Seed English Prompts" /> 
+  <attributeSet docName="clsfFrmMapLnk" text="Seed Form Item Mapping" /> 
+  <attributeSet docName="clsfRptMapLnk" text="Seed Report Parameter Mapping" /> 
+  <attributeSet docName="clsfEngPrompt" prompt="English Prompt" /> 
+  <attributeSet docName="clsfSeedEngPG" title="Seed English Prompts" windowTitle="Seed English Prompts" /> 
+  <attributeSet docName="clsfHomePG" title="Custom Language Support" windowTitle="Custom Language Support" /> 
+  <attributeSet docName="clsfFrmItmPG" title="Seed Form Item Mapping Page" windowTitle="Seed Form Item Mapping Page" /> 
+  <attributeSet docName="clsfComponentCode" prompt="Component Code" /> 
+  <attributeSet docName="clsfColumnName" prompt="Column Name" /> 
+  <attributeSet docName="clsfItemTypeDisplay" prompt="Item Type" /> 
+  <attributeSet docName="clsfSrchExstMap" text="Search Existing Mappings" /> 
+  <attributeSet docName="clsfRptPrmPG" title="Seed Report Parameter Mapping" windowTitle="Seed Report Parameter Mapping" /> 
+  <attributeSet docName="clsfLableName" prompt="Label Name" /> 
+  <attributeSet docName="clsfTrnsltCustMsgLnk" text="Translate Custom Prompts" /> 
+  <attributeSet docName="clsfTrnsltWfMsgLnk" text="Translate Workflow Messages" /> 
+  <attributeSet docName="clsfTrnsCustPrmptsPG" title="Translate Custom Prompts" windowTitle="Translate Custom Prompts" /> 
+  <attributeSet docName="clsfTrnsltdPrompt" prompt="Translated Prompt" /> 
+  <attributeSet docName="clsfTrnsWFMsgPG" title="Translate Workflow Messages" windowTitle="Translate Workflow Messages" /> 
+  <attributeSet docName="clsfSrchWfItems" text="Search Workflow Item" /> 
+  <attributeSet docName="clsfNtfSubject" text="Subject" /> 
+  <attributeSet docName="clsfNtfEngSubject" prompt="English Subject" /> 
+  <attributeSet docName="clsfNtfTransSubject" prompt="Translated Subject" /> 
+  <attributeSet docName="clsfNtfEngTxtBody" prompt="English Text Body" /> 
+  <attributeSet docName="clsfNtfBodyText" text="Text Body" /> 
+  <attributeSet docName="clsfNtfTransBodyText" prompt="Translated Text Body" /> 
+  <attributeSet docName="clsfNtfEngHtmlBody" prompt="Englsih HTML Body" /> 
+  <attributeSet docName="clsfNtfHtmlBody" text="HTML Body" /> 
+  <attributeSet docName="clsfTrnsNtfHtmlBody" prompt="Translated HTML Body" /> 
+  <attributeSet docName="clsfNtfMsgDetails" text="Notification Message Details" /> 
+  <attributeSet docName="clsfNtfMessage" prompt="Notification Message" /> 
+  <attributeSet docName="clsfInternalName" prompt="Internal Name" /> 
+  <attributeSet docName="clsfSrchCustPrmptsHint" simpleSearchInstrTexts="Search can be conducted based on English Phrase or Translated Phrase" /> 
+  <attributeSet docName="CreateUpdate" comment="Create/Update Button" prompt="Create/Update" /> 
+  <attributeSet docName="formName" prompt="Form Name" /> 
+  <attributeSet docName="userFormName" prompt="User Form Name" /> 
+  <attributeSet docName="executionFileName" prompt="Execution File Name" /> 
+  <attributeSet docName="reportName" prompt="Report Name" /> 
+- <!--  Attribute Sets added for CLSF END 
+  --> 
+- <!--  Attribute Sets added for Gap 93 START 
+  --> 
+  <attributeSet docName="RenewalNoticeDays" text="Renewal Notice Days" prompt="Renewal Notice Days" /> 
+  <attributeSet docName="RenewalDate" text="Renewal Date" prompt="Renewal Date" /> 
+  <attributeSet docName="DeficiencyBalance" text="Deficiency Balance" prompt="Deficiency Balance" /> 
+  <attributeSet docName="SpecificLossProvision" text="Specific Loss Provision" prompt="Specific Loss Provision" /> 
+  <attributeSet docName="TotalAdjustment" text="Total Adjustment Amount" prompt="Total Adjustment Amount" /> 
+  <attributeSet docName="RemainingPayments" text="Number of Remaining Payments" prompt="Number of Remaining Payments" /> 
+  <attributeSet docName="LienDate" text="Lien Date" prompt="Lien Date" /> 
+  <attributeSet docName="OwnerFlag" text="Equipment Owner Flag" prompt="Equipment Owner Flag" /> 
+  <attributeSet docName="AccumulatedDepriciation" text="Accumulated Depreciation" prompt="Accumulated Depreciation" /> 
+  <attributeSet docName="Term" text="Term" prompt="Term" /> 
+  <attributeSet docName="ResidualFactor" text="Residual Factor" prompt="Residual Factor" /> 
+  <attributeSet docName="LeaseSigner" text="Lease Signer" prompt="Lease Signer" /> 
+  <attributeSet docName="LeaseSignerContact" text="Lease Signer Contact" prompt="Lease Signer Contact" /> 
+  <attributeSet docName="NetBookValue" text="Net Book value" prompt="Net Book Value" /> 
+  <attributeSet docName="Format" prompt="Format" /> 
+  <attributeSet docName="CostBasis" prompt="Cost Basis" /> 
+  <attributeSet docName="PaymentAmount" prompt="Payment Amount" /> 
+  <attributeSet docName="LeaseSignerTitle" prompt="Lease Signer Title" /> 
+  <attributeSet docName="AdditionalInformation" text="Additional Information" /> 
+- <!--  Attribute Sets added for Gap 93 END 
+  --> 
+- <!--  Attribute Sets added for Gap 61 START 
+  --> 
+  <attributeSet docName="Consolidate" comment="Consolidate" dataType="VARCHAR2" maximumLength="1" prompt="Consolidate" required="no" /> 
+  <attributeSet docName="FeeRecipient" comment="Fee Recipient" dataType="VARCHAR2" maximumLength="200" prompt="Fee Recipient" required="yes" /> 
+  <attributeSet docName="FeeFormula" comment="Fee Formula" dataType="VARCHAR2" maximumLength="200" prompt="Fee Formula" required="yes" /> 
+  <attributeSet docName="FeeDescription" comment="Fee Description" dataType="VARCHAR2" maximumLength="200" prompt="Fee Description" required="yes" /> 
+  <attributeSet docName="FeeName" comment="Fee Name" dataType="VARCHAR2" maximumLength="200" prompt="Fee Name" required="yes" /> 
+  <attributeSet docName="Details" comment="Details" prompt="Details" /> 
+  <attributeSet docName="Description" comment="Description column" dataType="VARCHAR2" maximumLength="240" prompt="Description" required="no" /> 
+  <attributeSet docName="LeaseProcessName" comment="Lease Process Name" dataType="VARCHAR2" maximumLength="200" prompt="Lease Process Name" required="yes" /> 
+  <attributeSet docName="AdhocBillProcessSearch" windowTitle="Search Adhoc Bill Process" title="Search Adhoc Bill Process" text="Search Adhoc Bill Process" comment="Title for Search Adhoc Bill Process Page." /> 
+  <attributeSet docName="AdhocBillProcessCreate" windowTitle="Create Adhoc Bill Process" title="Create Adhoc Bill Process" text="Create Adhoc Bill Process" comment="Title for Create Adhoc Bill Process Page." /> 
+  <attributeSet docName="CreateAdhocBillProcess" prompt="Create Adhoc Bill Process" /> 
+- <!--  Attribute Sets added for Gap 61 END 
+  --> 
+- <!--  Attribute Sets added for Gap 72 START 
+  --> 
+  <attributeSet docName="Notes" comment="notes" prompt="Notes" /> 
+  <attributeSet docName="SearchBy" comment="search By" prompt="Search By" /> 
+  <attributeSet docName="EnteredDate" comment="Entered Date" prompt="Entered Date" /> 
+  <attributeSet docName="User" comment="User" prompt="User" /> 
+  <attributeSet docName="NoteType" comment="Note Type" prompt="Note Type" /> 
+  <attributeSet docName="Visibility" comment="Visibility" prompt="Visibility" /> 
+  <attributeSet docName="DateEntered" comment="Date Entered" prompt="Date Entered" /> 
+  <attributeSet docName="FollowupDate" comment="Followup Date" prompt="Followup Date" /> 
+  <attributeSet docName="NoteText" comment="Note Text" prompt="Note Text" /> 
+  <attributeSet docName="ContractNumber" comment="Contract Number" prompt="Contract Number" /> 
+  <attributeSet docName="AssetNumber" comment="Assett Number" prompt="Asset Number" /> 
+  <attributeSet docName="CustomerNumber" comment="Customer Number" prompt="Customer Number" /> 
+  <attributeSet docName="CustomerName" comment="Customer Name" prompt="Customer Name" /> 
+  <attributeSet docName="StartDate" comment="Start Date" prompt="Start Date" /> 
+  <attributeSet docName="EndDate" comment="End Date" prompt="End Date" /> 
+  <attributeSet docName="ContractStatus" comment="Contract Status" prompt="Contract Status" /> 
+  <attributeSet docName="AssetReturnStatus" comment="Asset Return Status" prompt="Asset Return Status" /> 
+  <attributeSet docName="AssetSearch" text="Asset Search" /> 
+  <attributeSet docName="CustomerSearch" text="Customer Search" /> 
+  <attributeSet docName="ContractSearch" text="Contract Search" /> 
+  <attributeSet docName="NotesSearch" title="Notes Search" windowTitle="Notes Search" /> 
+  <attributeSet docName="NotesDetail" title="Notes Detail" windowTitle="Notes Detail" /> 
+  <attributeSet docName="NotesHistory" text="Results" /> 
+  <attributeSet docName="AssetLov" shortDesc="Asset" comment="Asset Lov" /> 
+  <attributeSet docName="ContractLov" shortDesc="Contract" comment="Contract Lov" /> 
+  <attributeSet docName="CustomerLov" shortDesc="Customer" comment="Customer Lov" /> 
+  <attributeSet docName="CreateNote" prompt="Create Note" comment="Create Notes Button" /> 
+  <attributeSet docName="Attachment" text="Attachment" /> 
+- <!--  Attribute Sets added for Gap 72 END 
+  --> 
+- <!--  Attribute Sets added for Gap 10 START 
+  --> 
+  <attributeSet docName="AdvanceMonies" comment="advancemonies" prompt="Advance Monies" /> 
+  <attributeSet docName="AmountDue" comment="amountdue" prompt="Amount Due" /> 
+  <attributeSet docName="AmountApplied" comment="amountapplied" prompt="Amount Applied" /> 
+  <attributeSet docName="AmountOutstanding" comment="amountoutstanding" prompt="Amount Outstanding" /> 
+  <attributeSet docName="AllocateLockboxReceipt" comment="allocatelockboxreceipt" prompt="Allocate Lockbox Receipt" /> 
+- <!--  Attribute Sets added for Gap 10 END 
+  --> 
+- <!--  Attribute Sets added for Gap 152.02 START 
+  --> 
+  <attributeSet docName="VendorName" comment="VendorName" prompt="Vendor Name" text="Vendor Name" /> 
+  <attributeSet docName="AllocatedPercent" comment="AllocatedPercent" prompt="Allocated %" text="Allocated %" /> 
+  <attributeSet docName="RetainedPercent" comment="RetainedPercent" prompt="Retained %" text="Retained %" /> 
+  <attributeSet docName="PassthroughPercent" comment="PassthroughPercent" prompt="Passthrough %" text="Passthrough %" /> 
+  <attributeSet docName="Supplier" comment="Supplier" prompt="Supplier" text="Supplier" /> 
+  <attributeSet docName="StreamType" comment="StreamType" prompt="Stream Type" text="Stream Type" /> 
+  <attributeSet docName="PassthruPercent" comment="PassthruPercent" prompt="Passthrough Percent" text="Passthrough Percent" /> 
+  <attributeSet docName="PassthruBasisCd" comment="PassthruBasisCd" prompt="Passthrough Basis Code" text="Passthrough Basis Code" /> 
+  <attributeSet docName="RetainPercent" comment="RetainPercent" prompt="Retain Percent" text="Retain Percent" /> 
+  <attributeSet docName="VendorSite" comment="VendorSite" prompt="Vendor Site" text="Vendor Site" /> 
+  <attributeSet docName="PaymentMethod" comment="PaymentMethod" prompt="Payment Method" text="Payment Method" /> 
+  <attributeSet docName="ConsolidatedPassthru" windowTitle="Consolidated Passthrough" title="Consolidated Passthrough" text="Consolidated Passthrough" comment="Consolidate Passthrough Page." /> 
+  <attributeSet docName="ConsolidatedPassthruDtls" windowTitle="Consolidated Passthrough Detail" title="Consolidated Passthrough Detail" text="Consolidated Passthrough Detail" comment="Consolidated Passthrough Detail Page." /> 
+  <attributeSet docName="PassthruAllocation" text="Passthrough Allocation" comment="PassThruAllocaiton header" /> 
+  <attributeSet docName="ReturnConsPass" text="Return To Consolidated Counter Details" comment="Return to ConsCounterDtls" /> 
+  <attributeSet docName="ReturnConsCounter" text="Return To Usage Passthrough" comment="Return to UsgPassThru" /> 
+  <attributeSet docName="PassthroughButton" comment="Passthrough Button" prompt="Passthrough" /> 
+  <attributeSet docName="PriceList" comment="PriceList" prompt="Price List" text="Price List" /> 
+  <attributeSet docName="EffecFrm" comment="EffecFrm" prompt="Effective From" text="Effective From" /> 
+  <attributeSet docName="EffecTo" comment="EffecTo" prompt="Effective To" text="Effective To" /> 
+  <attributeSet docName="Currency" comment="Currency" prompt="Currency" text="Currency" /> 
+  <attributeSet docName="SeqNum" comment="SeqNum" prompt="Seq." text="Seq." /> 
+  <attributeSet docName="LineDescription" comment="LineDescription" prompt="Item" text="Item" /> 
+  <attributeSet docName="StartDateActive" comment="StartDateActive" prompt="Effective From" text="Effective From" /> 
+  <attributeSet docName="EndDateActive" comment="EndDateActive" prompt="Effective To" text="Effective To" /> 
+  <attributeSet docName="AttrValueFrom" comment="PricingAttrValueFrom" prompt="From" text="From" /> 
+  <attributeSet docName="AttrValueTo" comment="PricingAttrValueTo" prompt="To" text="To" /> 
+  <attributeSet docName="Operand" comment="Operand" prompt="Value" text="Value" /> 
+  <attributeSet docName="ReturnBackToCountersPage" comment="ReturnBackToCountersPage" prompt="Return to Consolidated Counter Details" text="Return to Consolidated Counter Details" /> 
+  <attributeSet docName="ReturnBackToSummaryPage" comment="ReturnBackToSummaryPage" prompt="Return to Price List Summary" text="Return to Price List Summary" /> 
+  <attributeSet docName="PriceBreakLinesHdrRN" comment="PriceBreakLinesHdrRN" text="Price Break Table" /> 
+  <attributeSet docName="ListLinesHeaderRN" comment="ListLinesHeaderRN" text="List Lines" /> 
+  <attributeSet docName="SummaryPageLayoutRN" windowTitle="Price List Summary" title="Price List" text="Price List Summary" comment="Price List Summary Page." /> 
+  <attributeSet docName="DetailsPageLayoutRN" windowTitle="Price Break Header Details" title="Price Break Header" text="Price Break Header" comment="Price Break Header Details Page." /> 
+- <!--  Attribute Sets added for Gap 152.02 END 
+  --> 
+- <!--  Attribute Sets added for Gap 23 BEGIN 
+  --> 
+  <attributeSet docName="BaselDelinquencyCode" prompt="Basel Delinquency Code" /> 
+  <attributeSet docName="BaselDescription" prompt="Basel Delinquency Code Description" /> 
+  <attributeSet docName="ChangeReason" prompt="Change Reason" /> 
+  <attributeSet docName="BaselTip" text="To update Basel Delinquency Codes for the contracts below, select a Basel Delinquency Code and click on the Update Button" /> 
+  <attributeSet docName="Status" prompt="Status" /> 
+  <attributeSet docName="CaseNumber" prompt="Case Number" /> 
+  <attributeSet docName="AgeCategory" prompt="Age Category" /> 
+  <attributeSet docName="VendorProgram" prompt="Vendor Program" /> 
+  <attributeSet docName="PrivateLabel" prompt="Private Label" /> 
+  <attributeSet docName="GrossRemainingAR" prompt="Gross Remaining AR" /> 
+  <attributeSet docName="AssignedCollector" prompt="Assigned Collector" /> 
+  <attributeSet docName="PONumber" prompt="PO Number" /> 
+  <attributeSet docName="BaselCode" prompt="Basel Code" /> 
+  <attributeSet docName="ViewHistory" prompt="View History" /> 
+  <attributeSet docName="Cancel" prompt="Cancel" /> 
+  <attributeSet docName="BaselDelHistory" title="Basel Delinquency Code History" /> 
+  <attributeSet docName="DateChanged" prompt="Date Changed" /> 
+  <attributeSet docName="ProductOracleCollections" text="" /> 
+  <attributeSet docName="Close" prompt="Close" /> 
+  <attributeSet docName="ReturnLitigation" text="Return to Litigation Create Note" /> 
+  <attributeSet docName="Tasks" title="Tasks" /> 
+- <!--  Attribute Sets added for Gap 23 END
+  --> 
+- <!--  Attribute Sets added for Gap 73 BEGIN 
+  --> 
+  <attributeSet docName="FileUploadPageLayoutRN" windowTitle="Meter File Upload" title="Meter File Upload" text="Meter File Upload" comment="Meter File Upload Page." /> 
+  <attributeSet docName="FileUploadHeaderRN" comment="File Dialog Header region" text="File Dialog" /> 
+  <attributeSet docName="FilePreviewHeaderRN" comment="File Preview Header region" text="Preview" /> 
+  <attributeSet docName="UploadFile" comment="Upload File Button" prompt="Upload File" /> 
+  <attributeSet docName="UploadSelect" comment="File Name" prompt="File Name" /> 
+  <attributeSet docName="DiscardFile" comment="Discard File Button" prompt="Discard File" /> 
+  <attributeSet docName="TotalReads" comment="Total Number of Reads" prompt="Total Number of Reads" /> 
+  <attributeSet docName="ValidReads" comment="Reads Passed Validation" prompt="Reads Passed Validation" /> 
+  <attributeSet docName="WarningReads" comment="Readings with Warning" prompt="Readings with Warning" /> 
+  <attributeSet docName="ErrorReads" comment="Reads Failed Validation" prompt="Reads Failed Validation" /> 
+  <attributeSet docName="Filter" comment="Filter Records Poplist" prompt="Filter" /> 
+  <attributeSet docName="ModelNumber" comment="Model Number" prompt="Model Number" /> 
+  <attributeSet docName="SerialNumber" comment="Serial Number" prompt="Serial Number" /> 
+  <attributeSet docName="CounterName" comment="Counter Name" prompt="Counter Name" /> 
+  <attributeSet docName="MeterDate" comment="Meter Date" prompt="Meter Date" /> 
+  <attributeSet docName="MeterRead" comment="Meter Read" prompt="Meter Read" /> 
+  <attributeSet docName="CopyCredits" comment="Copy Credits" prompt="Copy Credits" /> 
+  <attributeSet docName="BeginDate" comment="Begin Date" prompt="Begin Date" /> 
+  <attributeSet docName="StatusSwr" comment="Status" prompt="Status" /> 
+  <attributeSet docName="DiscardSwr" comment="Discard" prompt="Discard" /> 
+  <attributeSet docName="MessageDtls" comment="Message" prompt="Message" text="Message" /> 
+  <attributeSet docName="SelectPop" comment="Select" prompt="Select" /> 
+  <attributeSet docName="NotificationBtn" comment="Notification" prompt="Notification" /> 
+  <attributeSet docName="SaveToFileBtn" comment="Save to File" prompt="Save to File" text="Save to File" /> 
+  <attributeSet docName="MeterReadsAdvTbl" comment="This Table Shows Meter Read details" text="This Table Shows Meter Read Details" /> 
+  <attributeSet docName="OkayStatus" comment="The record status is okay" text="The record status is okay" /> 
+  <attributeSet docName="WarningStatus" comment="The record status is Warning" text="The record status is Warning" /> 
+  <attributeSet docName="ErrorStatus" comment="The record status is Error" text="The record status is Error" /> 
+  <attributeSet docName="DiscardDisabled" comment="This record is errored" text="This record is errored" /> 
+  <attributeSet docName="DiscardEnabled" comment="Check to discard this record" text="Check to discard this record" /> 
+  <attributeSet docName="ConsCntr" prompt="Consolidated Counter" comment="Consolidated Counter" /> 
+  <attributeSet docName="InitialMeterRead" prompt="Initial Meter Read" comment="Initial Meter Read" /> 
+  <attributeSet docName="EquipmentMake" prompt="Equipment Make" comment="Equipment Make" /> 
+  <attributeSet docName="EquipmentModel" prompt="Equipment Model" comment="Equipment Model" /> 
+  <attributeSet docName="CurrentCtrReadDate" prompt="Reading Date" comment="Reading Date" /> 
+  <attributeSet docName="CurrentCtrReading" prompt="Reading" comment="Reading" /> 
+  <attributeSet docName="NetUsage" prompt="Usage" comment="Usage" /> 
+  <attributeSet docName="Allowance" prompt="Allowance" comment="Allowance" /> 
+  <attributeSet docName="AccruedAllowance" prompt="Accrued Allowance" comment="Accrued Allowance" /> 
+  <attributeSet docName="Overage" prompt="Overage" comment="Overage" /> 
+  <attributeSet docName="OverageRate" prompt="Overage Rate" comment="Overage Rate" /> 
+  <attributeSet docName="EnteredBy" comment="Entered By" prompt="Entered By" /> 
+  <attributeSet docName="BillAmount" comment="Bill Amount" prompt="Bill Amount" /> 
+  <attributeSet docName="ReportingParty" comment="Reporting Party" prompt="Reporting Party" /> 
+  <attributeSet docName="ResetFlag" comment="Reset Flag" prompt="Reset" /> 
+  <attributeSet docName="ResetReason" comment="Reset Reason" prompt="Reset Reason" /> 
+  <attributeSet docName="ReturnToMeterEntry" text="Return to Meter Entry" comment="Return to MeterEntry" /> 
+  <attributeSet docName="Calculate" comment="Calculate" prompt="Calculate" /> 
+  <attributeSet docName="Period" comment="Period" prompt="Period" /> 
+  <attributeSet docName="AllQueriedReads" comment="All Queried Reads" prompt="All Queried Reads" /> 
+  <attributeSet docName="QueriedReadSubmit" comment="Queried Reads Submitted" prompt="Queried Reads Submitted" /> 
+  <attributeSet docName="QueriedReadDue" comment="Queried Reads Due" prompt="Queried Reads Due" /> 
+  <attributeSet docName="TotReadsSubmit" comment="Total Reads Submitted" prompt="Total Reads Submitted" /> 
+  <attributeSet docName="SuccReads" comment="Successfull Reads" prompt="Successful Reads" /> 
+  <attributeSet docName="ReadsError" comment="Reads with Errors" prompt="Reads with Errors" /> 
+  <attributeSet docName="ReadsWarning" comment="Reads with Warning" prompt="Reads with Warning" /> 
+  <attributeSet docName="SubmitValidateRes" comment="Submission Validation Results" prompt="Submission Validation Results" /> 
+  <attributeSet docName="SearchCriteria" comment="Search Criteria" prompt="Search Criteria" /> 
+  <attributeSet docName="SearchResults" comment="Search Results" prompt="Search Results" /> 
+  <attributeSet docName="PreviousReading" comment="Previous Reading" prompt="Previous Reading" /> 
+  <attributeSet docName="CounterDate" comment="Counter Date" prompt="Counter Date" /> 
+  <attributeSet docName="CounterReading" comment="Counter Reading" prompt="Counter Reading" /> 
+  <attributeSet docName="ActualQuantity" comment="Actual Quantity" prompt="Actual Quantity" /> 
+  <attributeSet docName="PreviousReadDate" comment="Previous Read Date" prompt="Previous Read Date" /> 
+  <attributeSet docName="CustomerGap073" comment="Customer" prompt="Customer" /> 
+  <attributeSet docName="ReturnToMeterSearch" comment="Return to Meter Search" text="Return to Meter Search" /> 
+  <attributeSet docName="MeterReadSearchPageLayoutRN" windowTitle="Meter Read Search" title="Meter Read Search" text="Meter Read Search" comment="Meter Read Search Page." /> 
+  <attributeSet docName="SearchHdrRN" windowTitle="Search" title="Search" text="Search" comment="Search Region." /> 
+  <attributeSet docName="SearchInstructionText" comment="Instruction Text" prompt="Please enter your search criteria and select the 'Go' button to see the result. Note that the search is case insensitive." /> 
+  <attributeSet docName="SearchTipText" comment="Search Tip Text" text="To change the default query sorting criteria, use Advanced Sort By Options." /> 
+  <attributeSet docName="DateFrom" comment="Date From Value" prompt="Date From" /> 
+  <attributeSet docName="VendorNameLov" comment="Vendor Name Lov" prompt="Vendor Name" /> 
+  <attributeSet docName="ContractNumberLov" comment="Contract Number Lov" prompt="Contract Number" /> 
+  <attributeSet docName="ConsolidatedCounterLov" comment="Consolidated Counter Lov" prompt="Consolidated Counter" /> 
+  <attributeSet docName="DateTo" comment="Date To Value" prompt="Date To" /> 
+  <attributeSet docName="CustomerNameLov" comment="Customer Name Lov" prompt="Customer Name" /> 
+  <attributeSet docName="LovCustomerNumber" comment="Customer Number" prompt="Customer Number" /> 
+  <attributeSet docName="SerialNumberLov" comment="Serial Number Lov" prompt="Serial Number" /> 
+  <attributeSet docName="FilterBy" comment="Filter By Conditions" prompt="Filter By" /> 
+  <attributeSet docName="SortByOptionHideShowRN" comment="Advanced Sort By Options" text="Advanced Sort By Options" /> 
+  <attributeSet docName="FirstSort" comment="First Sort Option" prompt="First Sort" /> 
+  <attributeSet docName="SecondSort" comment="Second Sort Option" prompt="Second Sort" /> 
+  <attributeSet docName="FirstSortOption" comment="First Sort Order" prompt="First Sort Order" /> 
+  <attributeSet docName="SecondSortOption" comment="Second Sort Order" prompt="Second Sort Order" /> 
+  <attributeSet docName="SearchGoButton" comment="Search Go Button" prompt="Go" /> 
+  <attributeSet docName="SearchClearButton" comment="Search Clear Button" prompt="Clear" /> 
+  <attributeSet docName="QueriedRecordsTip" comment="Queried Record Tip Text" text="To Enter/Update Meter Readings for all the queried records, click on the 'Enter Reads' button." /> 
+  <attributeSet docName="EnterReadsButton" comment="Enter Reads Button" prompt="Enter Reads" /> 
+  <attributeSet docName="RecsPerPageItem" comment="Records Per Page" prompt="Records Per Page" /> 
+  <attributeSet docName="ChangeButton" comment="Records Change Button" prompt="Change" /> 
+  <attributeSet docName="AssetNumberColumn" comment="Asset Number" prompt="Asset Number" /> 
+  <attributeSet docName="ResetColumn" comment="Reset Column" prompt="Reset" /> 
+  <attributeSet docName="DueDateColumn" comment="Due Date Column" prompt="Due Date" /> 
+  <attributeSet docName="AdvTableTip" comment="Advance Table Tip Text" text="To change the number of records displayed per page, change the default value in the Records Per Page field and click on the Change button." /> 
+  <attributeSet docName="NormalCounters" windowTitle="Counter History" title="Counter History" text="Counter History" comment="Counter History" /> 
+  <attributeSet docName="ConsCounterHist" windowTitle="Consolidated Counter History" title="Consolidated Counter History" text="Consolidated Counter History" comment="Consolidated Counter History" /> 
+  <attributeSet docName="ClearRecordEntry" comment="Clear Record" prompt="Clear Record" /> 
+- <!--  Attribute Sets added for Gap 073 END 
+  --> 
+- <!--  Attribute Sets added for Gap 144 Start
+  --> 
+  <attributeSet docName="validatePageLayoutRN" windowTitle="Validate Address" title="Validate Address" text="Validate Address" comment="Validate Address Page." /> 
+  <attributeSet docName="CreateUpdateAddressRN" windowTitle="Address" title="Address" text="Address" comment="Address Page." /> 
+  <attributeSet docName="AddressesRN" windowTitle="Addresses" title="Addresses" text="Addresses" comment="Addresses Page." /> 
+  <attributeSet docName="AddressRN" comment="Address" text="Address" /> 
+  <attributeSet docName="address" prompt="Address" description="Address" text="Address" /> 
+  <attributeSet docName="country" prompt="Country" description="Country" text="Country" /> 
+  <attributeSet docName="confidenceScore" prompt="Confidence Score" description="Confidence Score" text="Confidence Score" /> 
+  <attributeSet docName="quickSelectImage" prompt="Quick Select" description="Quick Select" text="Quick Select" /> 
+  <attributeSet docName="Select" comment="UI Standards 'Select' button as of 8/28/02" prompt="Select" warnAboutChanges="false" /> 
+  <attributeSet docName="Override" comment="UI Standards 'Override' button as of 8/28/02" prompt="Override" warnAboutChanges="false" /> 
+  <attributeSet docName="validateAddress" comment="UI Standards 'ValidateAddress' button as of 8/28/02" prompt="Validate Address" warnAboutChanges="false" /> 
+  <attributeSet docName="County" prompt="County" /> 
+  <attributeSet docName="Province" prompt="Province" /> 
+  <attributeSet docName="PostalCode" prompt="Postal Code" /> 
+  <attributeSet docName="Remove" prompt="Remove" /> 
+  <attributeSet docName="updatePurposeSwitcher" prompt="Update Address Purpose" /> 
+  <attributeSet docName="primarySwitcher" prompt="Identifying" /> 
+  <attributeSet docName="Use" prompt="Purpose" /> 
+  <attributeSet docName="mapImage" prompt="Map" /> 
+  <attributeSet docName="hzPurposeHeader" comment="Address Purposes" text="Address Purposes" /> 
+- <!--  Attribute Sets added for Gap 144 End
+  --> 
+- <!--  Attribute Sets added for Addendum in Gap 150B Start
+  --> 
+  <attributeSet docName="welcomeLtrTempCodeName" prompt="Welcome Letter Template Code" /> 
+  <attributeSet docName="privateLabel" prompt="Private Label" /> 
+- <!--  Attribute Sets added for Addendum in Gap 150B End
+  --> 
+- <!--  Attribute Sets added for Gap 93.02 Start
+  --> 
+  <attributeSet docName="NotifyMethod" prompt="Notification Method" /> 
+  <attributeSet docName="EmailFaxAtt" prompt="Email/Fax Attention" /> 
+  <attributeSet docName="EmailFaxAddNum" prompt="Email Address/Fax Number" /> 
+  <attributeSet docName="SINum" prompt="SI No" /> 
+  <attributeSet docName="DateSent" prompt="Date Sent" /> 
+  <attributeSet docName="SentBy" prompt="Sent By" /> 
+  <attributeSet docName="ContractRole" prompt="Contract Role" /> 
+  <attributeSet docName="PartyName" prompt="Party Name" /> 
+  <attributeSet docName="EmailFaxNum" prompt="Email/Fax No" /> 
+  <attributeSet docName="ErrorReason" prompt="Error Reason" /> 
+  <attributeSet docName="AssignCode" prompt="Assignment Codes" /> 
+  <attributeSet docName="AssignReasonCode" prompt="Assignment Reason Codes" /> 
+  <attributeSet docName="BaseDelinqCode" prompt="BASEL Delinquency Code" /> 
+  <attributeSet docName="QuoteLetStatus" prompt="Quote Letter Request Status" /> 
+  <attributeSet docName="QuoteRole" prompt="Quote Role" /> 
+  <attributeSet docName="ContactRole" prompt="Contact Role" /> 
+- <!--  Attribute Sets added for Gap 93.02 End
+  --> 
+- <!--  Attribute Sets added for GLBL1057 START 
+  --> 
+  <attributeSet docName="ContractNumberCnv" prompt="Contract Number" /> 
+  <attributeSet docName="AssetNumberCnv" prompt="Asset Number" /> 
+  <attributeSet docName="OracleCustomerNumberCnv" prompt="Oracle Customer Number" /> 
+  <attributeSet docName="LegacyInvoiceNumberCnv" prompt="Legacy Invoice Number" /> 
+  <attributeSet docName="InvoiceDueDateFromCnv" prompt="Invoice Due Date From" /> 
+  <attributeSet docName="InvoiceDueDateToCnv" prompt="Invoice Due Date To" /> 
+  <attributeSet docName="InvoiceGroupCnv" prompt="Invoice Group" /> 
+  <attributeSet docName="CustomerNameCnv" prompt="Customer Name" /> 
+  <attributeSet docName="PrivateLabelCnv" prompt="Private Label" /> 
+  <attributeSet docName="BillToAddressCnv" prompt="Bill To Address" /> 
+  <attributeSet docName="RemitToAddressCnv" prompt="Remit To Address" /> 
+  <attributeSet docName="ViewMeterReadCnv" prompt="View Meter Read" /> 
+  <attributeSet docName="GoCnv" prompt="Go" /> 
+  <attributeSet docName="ClearCnv" prompt="Clear" /> 
+  <attributeSet docName="ReturnLinkToArBIllingCnv" text="Return to Ar Billing Search Page" /> 
+  <attributeSet docName="TransactionTypeCnv" prompt="Transaction Type" /> 
+  <attributeSet docName="LegacyStreamCnv" prompt="Legacy Stream" /> 
+  <attributeSet docName="InvoiceDateCnv" prompt="Invoice Date" /> 
+  <attributeSet docName="DueDateCnv" prompt="Due Date" /> 
+  <attributeSet docName="OriginalAmountCnv" prompt="Original Amount" /> 
+  <attributeSet docName="TaxAmountCnv" prompt="Tax Amount" /> 
+  <attributeSet docName="TransactionAmountCnv" prompt="Transaction Amount" /> 
+  <attributeSet docName="AmountReceivedCnv" prompt="Amount Received" /> 
+  <attributeSet docName="AmountConvertedCnv" prompt="Amount Converted" /> 
+  <attributeSet docName="ReceiptNumberCnv" prompt="Check Number" /> 
+  <attributeSet docName="ReceiptDateCnv" prompt="Check Date" /> 
+  <attributeSet docName="CheckNumberCnv" prompt="Check Number" /> 
+  <attributeSet docName="CheckDateCnv" prompt="Check Date" /> 
+  <attributeSet docName="CommentCnv" prompt="Comments:" /> 
+  <attributeSet docName="AppliedDateCnv" prompt="Applied Date" /> 
+  <attributeSet docName="OracleInvoiceNumberCnv" prompt="Oracle Invoice Number" /> 
+  <attributeSet docName="CounterNameCnv" prompt="Counter Name" /> 
+  <attributeSet docName="MeterReadDateCnv" prompt="Meter Read Date" /> 
+  <attributeSet docName="MeterReadCnv" prompt="Meter Read" /> 
+  <attributeSet docName="UsageCnv" prompt="Usage" /> 
+  <attributeSet docName="AllowanceCnv" prompt="Allowance" /> 
+  <attributeSet docName="AccuredAllowedCnv" prompt="Accured Allowed" /> 
+  <attributeSet docName="ConsCounterNameCnv" prompt="Consolidated Counter Name" /> 
+  <attributeSet docName="NetUsageCnv" prompt="Net Usage" /> 
+  <attributeSet docName="UsageRateCnv" prompt="Usage Rate" /> 
+  <attributeSet docName="OverageCnv" prompt="Overage" /> 
+  <attributeSet docName="OverageRateCnv" prompt="Overage Rate" /> 
+  <attributeSet docName="BillAmountCnv" prompt="Bill Amount" /> 
+  <attributeSet docName="ReceiptAmountCnv" prompt="Receipt Amount" /> 
+  <attributeSet docName="RemitTophone1Cnv" prompt="Remit To Phone1" /> 
+  <attributeSet docName="RemitTophone2Cnv" prompt="Remit To Phone2" /> 
+  <attributeSet docName="InvNumberCnv" prompt="Invoice Number" /> 
+  <attributeSet docName="InvDueDate2Cnv" prompt="Invoice Due Date" /> 
+  <attributeSet docName="OrigInvNumberCnv" prompt="Original Invoice Number" /> 
+  <attributeSet docName="PaymentDueDateCnv" prompt="Payment Due Date" /> 
+  <attributeSet docName="InvoiceLineAmountCnv" prompt="Invoice Line Amount" /> 
+  <attributeSet docName="InvoiceLineDescCnv" prompt="Invoice Line Description" /> 
+  <attributeSet docName="ArInvStatHisCnv" title="AR Invoice Statement History" windowTitle="AR Invoice Statement History" /> 
+  <attributeSet docName="ViewCommentsCnv" prompt="View Comments" /> 
+  <attributeSet docName="InvStatDetailsCnv" text="Invoice Statement Details" /> 
+  <attributeSet docName="AdjustmentCnv" prompt="Adjustment" /> 
+  <attributeSet docName="AdjustmentTypeCnv" prompt="Adjustment Type" /> 
+  <attributeSet docName="ReceivableDueDateFromCnv" prompt="Receivable Due Date From" /> 
+  <attributeSet docName="ReceivableDueDateToCnv" prompt="Receivable Due Date To" /> 
+  <attributeSet docName="PaymentMethodCnv" prompt="Payment Method" /> 
+  <attributeSet docName="AppliedAmountCnv" prompt="Applied Amount" /> 
+  <attributeSet docName="ApplicationDateCnv" prompt="Application Date" /> 
+  <attributeSet docName="RemainingAmountCnv" prompt="Remaining Amount" /> 
+  <attributeSet docName="ConsInvoiceNumberCnv" prompt="Cons Invoice Number" /> 
+  <attributeSet docName="InvoiceCUrrencyCnv" prompt="Invoice Currency" /> 
+  <attributeSet docName="ReceiptCUrrencyCnv" prompt="Receipt Currency" /> 
+  <attributeSet docName="StatusCnv" prompt="Status" /> 
+  <attributeSet docName="ReasonCnv" prompt="Reason" /> 
+  <attributeSet docName="SearchBlockCnv" text="Search" /> 
+  <attributeSet docName="ReceiptHistoryCnv" title="AR Receipt History" windowTitle="AR Receipt History" /> 
+  <attributeSet docName="NormalMeterHdrCnv" title="Meter Read(Normal Counter)" windowTitle="Meter Read(Normal Counter)" /> 
+  <attributeSet docName="ConsMeterHdrCnv" title="Meter Read(Consolidated Counter)" windowTitle="Meter Read(Consolidated Counter)" /> 
+  <attributeSet docName="NormalMeterResultsCnv" text="Results" /> 
+  <attributeSet docName="NormalMeterDetailsCnv" text="Meter Read Details" /> 
+  <attributeSet docName="ArBillingCnv" title="AR Billing History" windowTitle="AR Billing History" /> 
+  <attributeSet docName="ArBillingResultsCnv" text="Results" /> 
+  <attributeSet docName="ArBillingDetailsCnv" text="Billing Details" /> 
+  <attributeSet docName="ArBillingRcDetailsCnv" text="Receipt Details" /> 
+- <!--  Attribute Sets added for GLBL1057 END 
+  --> 
+- <!--  Attribute Sets added for Gap 106.02 Start
+  --> 
+  <attributeSet docName="AssetStatusSearch" prompt="Asset Status" /> 
+  <attributeSet docName="RemarketGrpSearch" prompt="Remarketer Group" /> 
+  <attributeSet docName="ContractNumSearch" prompt="Contract Number" /> 
+  <attributeSet docName="manufacturerSearch" prompt="Manufacturer" /> 
+  <attributeSet docName="stateSearch" prompt="State" /> 
+  <attributeSet docName="vendProgSearch" prompt="Vendor Program" /> 
+  <attributeSet docName="priceMessageLayout" prompt="Price From" /> 
+  <attributeSet docName="priceTo" prompt="To" /> 
+  <attributeSet docName="AssetHeader" text="Asset Number" /> 
+  <attributeSet docName="AssetDescHdr" text="Asset Description" /> 
+  <attributeSet docName="AssetPriceHdr" text="Asset Price" /> 
+  <attributeSet docName="ManufacHeader" text="Manufacturer" /> 
+  <attributeSet docName="StateProvHdr" text="State/Province" /> 
+  <attributeSet docName="VendProgHdr" text="Vendor Program" /> 
+  <attributeSet docName="ContractNumHdr" text="Contract Number" /> 
+  <attributeSet docName="RepurchaseFlagHdr" text="Repurchase Flag" /> 
+  <attributeSet docName="RmktrNameHdr" text="Remarketer Name" /> 
+  <attributeSet docName="remarkatableTypeHdr" text="Remarketer Type" /> 
+  <attributeSet docName="rmktCustNameHeader" text="Remarket Customer Name" /> 
+  <attributeSet docName="copyRmktrBtn" prompt="Copy Remarketer" /> 
+  <attributeSet docName="updateBtn" prompt="Update" /> 
+  <attributeSet docName="assetRmktSelect" prompt="Select Object" /> 
+  <attributeSet docName="ManufacturerName" prompt="Manufacturer" /> 
+  <attributeSet docName="ResourceName" prompt="Remarketer Name" /> 
+  <attributeSet docName="RmktrTypeMeaning" prompt="Remarketer Type" /> 
+  <attributeSet docName="NvlStateProvince" prompt="State/Province" /> 
+  <attributeSet docName="ProgramNumber" prompt="Vendor Program" /> 
+  <attributeSet docName="TeamName" prompt="Remarketer Group" /> 
+  <attributeSet docName="RmktCustName" prompt="Remarket Customer Name" /> 
+- <!--  Attribute Sets added for Gap 106.02 End
+  --> 
+- <!--  Attribute Sets added for Gap 93.02 Start
+  --> 
+  <attributeSet docName="ApplyBut" prompt="Apply" /> 
+- <!--  Attribute Sets added for Gap 93.02 End
+  --> 
+- <!--  Attribute Sets added for Gap 59 Start
+  --> 
+  <attributeSet docName="summaryOfBidLists" windowTitle="Summary Of BidLists" title="Summary Of BidLists" text="Summary Of BidLists" comment="Summary Of BidLists Page." /> 
+  <attributeSet docName="BidName" prompt="Bid Name" /> 
+  <attributeSet docName="BidNumber" prompt="Bid Number" /> 
+  <attributeSet docName="RemarketType" prompt="Remarket Type" /> 
+  <attributeSet docName="BidStatus" prompt="Bid Status" /> 
+  <attributeSet docName="BidStartDate" prompt="Bid Start Date" /> 
+  <attributeSet docName="BidEndDate" prompt="Bid Close Date" /> 
+  <attributeSet docName="Create" prompt="Create" /> 
+  <attributeSet docName="createBidLists" windowTitle="Create Bid List" text="Create Bid List" comment="Create Bid List Page." /> 
+  <attributeSet docName="Remarketer" prompt="Remarketer" /> 
+  <attributeSet docName="Apply" prompt="Apply" /> 
+  <attributeSet docName="BidListTitle" windowTitle="Bid List" text="Bid List" comment="Bid List Page." /> 
+  <attributeSet docName="SelectionCloseDate" prompt="Selection Close Date" /> 
+  <attributeSet docName="BidListStatus" prompt="Bid List Status" /> 
+  <attributeSet docName="BidListType" prompt="Bid List Type" /> 
+  <attributeSet docName="Assets" text="Assets" /> 
+  <attributeSet docName="SelectWinningBid" text="Select Winning Bid" /> 
+  <attributeSet docName="UpldBidResponses" text="Upload Bid Responses" /> 
+  <attributeSet docName="SelectedAssets" text="Selected Assets" /> 
+  <attributeSet docName="SearchAssets" text="Search Assets Available For Sale" /> 
+  <attributeSet docName="From" text="From" /> 
+  <attributeSet docName="To" text="To" /> 
+  <attributeSet docName="Catalog" prompt="Catalog" /> 
+  <attributeSet docName="ItemCatalog" prompt="Item Catalog" /> 
+  <attributeSet docName="Manufacturer" prompt="Manufacturer" /> 
+  <attributeSet docName="AssetManufacturer" prompt="Asset Manufacturer" /> 
+  <attributeSet docName="Model" prompt="Model" /> 
+  <attributeSet docName="AssetModel" prompt="Asset Model" /> 
+  <attributeSet docName="Item" prompt="Item" /> 
+  <attributeSet docName="AssetLocation" prompt="Asset Location" /> 
+  <attributeSet docName="DownloadBidList" text="Download Bid List" /> 
+  <attributeSet docName="AddtoBidList" prompt="Add to Bid List" /> 
+  <attributeSet docName="Price" prompt="Price" /> 
+  <attributeSet docName="PartyId" prompt="Party Id" /> 
+  <attributeSet docName="RemoveInstructionText" comment="Instruction Text" prompt="To remove items from Bid List select the items to remove and click on Remove button." /> 
+  <attributeSet docName="SearchAssetsText" comment="Instruction Text" prompt="To Search for the items Available for Sale enter Search Criteria like Asset Item, Category etc. Optionally a range search can be performed by entering both From and To as Search criteria." /> 
+  <attributeSet docName="AddInstructionText" comment="Instruction Text" prompt="Select the Assets from the following Search Results table and click on Add to Bid List Button to add the selected Assets to the Bid List above." /> 
+  <attributeSet docName="BidderName" prompt="Bidder Name" /> 
+  <attributeSet docName="FileName" prompt="File Name (.CSV Format)" /> 
+  <attributeSet docName="Upload" prompt="Upload" /> 
+  <attributeSet docName="AssetItem" prompt="Asset Item" /> 
+  <attributeSet docName="SelectBy" prompt="Select By" /> 
+  <attributeSet docName="CreateQuote" prompt="Create Quote" /> 
+  <attributeSet docName="PriceOffered" prompt="Price Offered" /> 
+  <attributeSet docName="TotalOffered" prompt="Total Offered" /> 
+  <attributeSet docName="QuoteNum" prompt="Quote Number" /> 
+  <attributeSet docName="PrePayInvNum" prompt="Prepayment Invoice Number" /> 
+  <attributeSet docName="ArInvNum" prompt="AR Invoice Number" /> 
+  <attributeSet docName="OrderNum" prompt="Order Number" /> 
+- <!--  Attribute Sets added for Gap 59 End
+  --> 
+- <!--  Attribute Sets added for Gap 155 Start
+  --> 
+  <attributeSet docName="FilingStatus" prompt="UCC Filing Status" /> 
+  <attributeSet docName="OrderNo" prompt="Filing Service Order No" /> 
+  <attributeSet docName="ServiceMsg" prompt="Filing Service Message" /> 
+  <attributeSet docName="ApplNum" prompt="Application Number" /> 
+  <attributeSet docName="ApplBookAmt" prompt="Application / Booked Amount" /> 
+  <attributeSet docName="MasterLeaseNo" prompt="Master Lease Number" /> 
+  <attributeSet docName="PurchaseOptType" prompt="Purchase Option Type" /> 
+  <attributeSet docName="VenProgram" prompt="Program" /> 
+  <attributeSet docName="AssetLoc" prompt="Asset Location" /> 
+  <attributeSet docName="FloridaStmpTax" prompt="Florida Stamp Tax" /> 
+  <attributeSet docName="CollateralHldgAmt" prompt="Collateral Holding Amount" /> 
+  <attributeSet docName="LegalName" prompt="Legal Name" /> 
+  <attributeSet docName="FederalTaxId" prompt="Federal Tax ID Number" /> 
+  <attributeSet docName="EntityType" prompt="Entity Type" /> 
+  <attributeSet docName="AddlFilingNo" prompt="Addl. Filing No" /> 
+  <attributeSet docName="AddlCustomerType" prompt="Customer Type" /> 
+  <attributeSet docName="AddlOrgOrSsnId" prompt="Org ID/SSN" /> 
+  <attributeSet docName="AddlFilingState" prompt="UCC Filing State" /> 
+  <attributeSet docName="AddlFilingType" prompt="UCC Type" /> 
+  <attributeSet docName="AddlOrderNum" prompt="Filing Service Order Number" /> 
+  <attributeSet docName="AddlFilingStatus" prompt="UCC Filing Status" /> 
+  <attributeSet docName="AddlFilingNumber" prompt="UCC Filing Number" /> 
+  <attributeSet docName="AddlFilingRecordedDt" prompt="UCC Filed Date" /> 
+  <attributeSet docName="AssetDeliveryDate" prompt="Asset Delivery Date" /> 
+  <attributeSet docName="FilingReqYn" prompt="UCC Filing Required" /> 
+  <attributeSet docName="TimelyFilingReqYn" prompt="Timely Filing Required" /> 
+  <attributeSet docName="FilingStateVerifiedYn" prompt="UCC Filing State Verified" /> 
+  <attributeSet docName="FilingSentDate" prompt="UCC Sent Date" /> 
+  <attributeSet docName="FilingRecordedDate" prompt="UCC Recorded Date" /> 
+  <attributeSet docName="FilingNumber" prompt="UCC Filing Number" /> 
+  <attributeSet docName="FilingType" prompt="UCC Type" /> 
+  <attributeSet docName="SecuredPartyName" prompt="Secured Party Name" /> 
+  <attributeSet docName="SecuredPartyAdd" prompt="Secured Party Address" /> 
+  <attributeSet docName="WaivedUccFilingYn" prompt="Waived Ucc FilingYn" /> 
+  <attributeSet docName="UccWaivedBy" prompt="UCC Filing Waived By" /> 
+  <attributeSet docName="WaivedTimelyFilingYn" prompt="Waived Timely FilingYn" /> 
+  <attributeSet docName="TimelyWaivedBy" prompt="Timely Filing Waived By" /> 
+  <attributeSet docName="LienSrchOrderedYn" prompt="Lien Search Ordered" /> 
+  <attributeSet docName="LienSrchOrderedDate" prompt="Lien Search Ordered Date" /> 
+  <attributeSet docName="LienSrchReceivedDate" prompt="Lien Search Received Date" /> 
+  <attributeSet docName="LienSrchSatisfiedYn" prompt="Search Satisfied" /> 
+  <attributeSet docName="ContinuedYn" prompt="UCC Continued" /> 
+  <attributeSet docName="ContinuationDate" prompt="UCC Continued Date" /> 
+  <attributeSet docName="ContinuationNum" prompt="UCC Contiuned Number" /> 
+  <attributeSet docName="CollateralStmtType" prompt="Collateral Statement Type" /> 
+  <attributeSet docName="CollateralStmt" prompt="Collateral Statement" /> 
+  <attributeSet docName="AsstMake" prompt="Make" /> 
+  <attributeSet docName="AsstModel" prompt="Model" /> 
+  <attributeSet docName="UCCFilingDtlsPG" windowTitle="UCC Filing Details Page" title="UCC Details" text="UCC Details" /> 
+  <attributeSet docName="LeaseInfoHdr" comment="Lease Information" text="Lease Information" /> 
+  <attributeSet docName="CustomerInfoHdr" comment="Customer Information" text="Customer Information" /> 
+  <attributeSet docName="AddFilingHdr" comment="Additional Filing" text="Additional Filing" /> 
+  <attributeSet docName="UccFilingInfoHdr" comment="UCC Filing Information" text="UCC Filing Information" /> 
+  <attributeSet docName="CollateralStmtRN" comment="Collateral Statement" text="Collateral Statement" /> 
+  <attributeSet docName="AssetMasterHdr" comment="Collateral Statement" text="Asset Master" /> 
+  <attributeSet docName="TermsandCondition" comment="TermsandCondition" text="Title Registration Information" /> 
+  <attributeSet docName="UCCDeptAcc" prompt="Department Account No" /> 
+  <attributeSet docName="UCCCity" prompt="City" /> 
+  <attributeSet docName="UCCState" prompt="State" /> 
+  <attributeSet docName="UCCZip" prompt="Zip" /> 
+  <attributeSet docName="UCCAttachment" prompt="Attachments" /> 
+  <attributeSet docName="UCCComment" prompt="Comments" /> 
+  <attributeSet docName="UCCFilingState" prompt="UCC Filing State" /> 
+  <attributeSet docName="UCCOrgSSN" prompt="Org ID/Character No /SSN(Sole Prop)" /> 
+  <attributeSet docName="TermInMonths" prompt="Term In Months" /> 
+  <attributeSet docName="ExportToExcel" text="Export To Excel" /> 
+  <attributeSet docName="UCCFilingSentDate" prompt="UCC Filing Sent Date" /> 
+  <attributeSet docName="UCCFilingRecordedDate" prompt="UCC Filing Recorded Date" /> 
+  <attributeSet docName="ZipCode" prompt="Zip Code" /> 
+  <attributeSet docName="UCCFilings" windowTitle="UCC Filing Search Page" title="UCC Filings" /> 
+  <attributeSet docName="AttachmentAvailable" prompt="Attachment Available" /> 
+  <attributeSet docName="AdvTableResults" text="Results" /> 
+  <attributeSet docName="ShowDetails" prompt="Show Details" comment="Show Details Button" /> 
+  <attributeSet docName="UCCSummPG" windowTitle="UCC Filing Summary Page" title="UCC Summary" comment="UCC Filing Summary Page" /> 
+  <attributeSet docName="UCCPrivatelbl" prompt="UCC Private Label" comment="UCCPrivateLabel" /> 
+  <attributeSet docName="UccSecheduleAAttach" prompt="Schedule A Attachment" comment="Schedule A Attachment" /> 
+- <!--  Attribute Sets added for Gap 155 End
+  --> 
+- <!--  Attribute Sets added for GAP89 START 
+  --> 
+  <attributeSet docName="TRCMCreateRule" title="Termination Rule Details" windowTitle="Termination Rule Details" /> 
+  <attributeSet docName="TRCMSearchRule" title="Termination Rules" windowTitle="Termination Rules" /> 
+  <attributeSet docName="TRCMSearchRuleSrch" text="Search By" /> 
+  <attributeSet docName="TRCMSearchRuleRslt" text="Results" /> 
+  <attributeSet docName="TRCreChecklist" prompt="Checklist" /> 
+  <attributeSet docName="TRCreAssignedGrp" prompt="Assigned Group" /> 
+  <attributeSet docName="TRCreAssignedGrpID" prompt="Assigned Group ID" /> 
+  <attributeSet docName="TRCMGo" prompt="Go" /> 
+  <attributeSet docName="TRCreRoleType" prompt="Rule Type" /> 
+  <attributeSet docName="TRCreMessage" prompt="Message" /> 
+  <attributeSet docName="TRCrePriority" prompt="Priority" /> 
+  <attributeSet docName="TRCrePrioritytx" text="Priority" /> 
+  <attributeSet docName="TRCrePriorityFrom" prompt="Priority From" /> 
+  <attributeSet docName="TRCrePriorityTo" prompt="Priority To" /> 
+  <attributeSet docName="TRSrcBusinessCri" prompt="Business Criterion" /> 
+  <attributeSet docName="TRSrcCriterion" prompt="Criterion" /> 
+  <attributeSet docName="TRSrcCriterionVal" prompt="Criterion Value" /> 
+  <attributeSet docName="TRCreEffectiveFrom" prompt="Effective From" /> 
+  <attributeSet docName="TRCreEffectiveTo" prompt="Effective To" /> 
+  <attributeSet docName="TRCreCancel" prompt="Cancel" /> 
+  <attributeSet docName="TRCreUpdate" prompt="Update" /> 
+  <attributeSet docName="TRCreCreate" prompt="Create" /> 
+  <attributeSet docName="TRCPriorityNumber" prompt="Priority" /> 
+  <attributeSet docName="TRCMessage" prompt="Messages" /> 
+  <attributeSet docName="TRCContinue" prompt="Continue" /> 
+  <attributeSet docName="TRCPageHeader" text="Warnings for Termination Quote" /> 
+  <attributeSet docName="TRCPageLayoutRN" windowTitle="Warnings for Termination Quote" /> 
+  <attributeSet docName="QuoteMsgDtlsHdrRN" text="Messages" /> 
+  <attributeSet docName="ValRuleSH" prompt="Validation" /> 
+  <attributeSet docName="RuleDescSH" prompt="Description" /> 
+  <attributeSet docName="RuleMsgSH" prompt="Message" /> 
+  <attributeSet docName="WarnC_TrnNd" comment="Contract Level Warn Train Node Text" text="Contract Checklist Warnings" /> 
+  <attributeSet docName="WarnA_TrnNd" comment="Asset Level Warn Train Node Text" text="Asset Level Warnings" /> 
+- <!--  Attribute Sets added for GAP89 END 
+  --> 
+- <!--  Attribute Sets added to fix issue 2980 for Gap 93.02 START 
+  --> 
+  <attributeSet docName="StatusTabPrompt" text="Quote Letter Status" /> 
+- <!--  Attribute Sets added to fix issue 2980 for Gap 93.02 END 
+  --> 
+- <!--  Attribute Sets added for Gap 11.02 Start
+  --> 
+  <attributeSet docName="assetLocChangeSmry" windowTitle="Asset Location Change Assessments" title="Asset Location Change Assessments" text="Asset Location Change Assessments" comment="Asset Location Change Assessments." /> 
+  <attributeSet docName="purchaseOptionHeader" comment="Purchase Option" text="Purchase Option" /> 
+  <attributeSet docName="previousLocStateHeader" comment="Previous Location State" text="Previous Location State" /> 
+  <attributeSet docName="newLocStateHeader" comment="New Location State" text="New Location State" /> 
+  <attributeSet docName="effectFromHeader" comment="Effective From" text="Effective From" /> 
+  <attributeSet docName="effectToHeader" comment="Effective To" text="Effective To" /> 
+  <attributeSet docName="purchaseOptionPoplist" prompt="Purchase Option" /> 
+  <attributeSet docName="previousLocStatePoplist" prompt="Previous Location State" /> 
+  <attributeSet docName="newLocStatePoplist" prompt="New Location State" /> 
+  <attributeSet docName="comments" prompt="Comments" /> 
+- <!--  Attribute Sets added for Gap 11.02 End
+  --> 
+- <!--  Gap144.02 Addendum Start
+  --> 
+  <attributeSet docName="SalesTaxAreaId" prompt="Sales Tax Area Id" description="Sales Tax Area Id" text="Sales Tax Area Id" /> 
+  <attributeSet docName="JurisdictionId" prompt="Jurisdiction Id" description="Jurisdiction Id" text="Jurisdiction Id" /> 
+  <attributeSet docName="JurisdictionName" prompt="Jurisdiction Name" description="Jurisdiction Name" text="Jurisdiction Name" /> 
+  <attributeSet docName="JurisdictionLevel" prompt="Jurisdiction Level" description="Jurisdiction Level" text="Jurisdiction Level" /> 
+  <attributeSet docName="VertexSalesTaxAreaMainRN" windowTitle="Vertex Sales Tax Area ID Selection" title="Vertex Sales Tax Area ID Selection" text="Vertex Sales Tax Area ID Selection" comment="Vertex Sales Tax Area ID Selection Page." /> 
+- <!--  Gap144.02 Addendum End
+  --> 
+- <!--  Attribute Sets added for Gap 58 Start
+  --> 
+  <attributeSet docName="LssOpenInvoicesRN" windowTitle="Open Invoices" title="Open Invoices" text="Open Invoices" comment="Open Invoices Page." /> 
+  <attributeSet docName="InvDate" prompt="Invoice Date" /> 
+  <attributeSet docName="InvNum" prompt="Invoice Number" /> 
+  <attributeSet docName="InvDueDt" prompt="Invoice Due Date" /> 
+  <attributeSet docName="TotInvAmt" prompt="Total Invoice Amount" /> 
+  <attributeSet docName="BillToAdd" prompt="Bill To Address" /> 
+  <attributeSet docName="SelectAnd" text="Select and ..." /> 
+  <attributeSet docName="MakePmt" prompt="Make Payment" /> 
+  <attributeSet docName="LinkToAdb" text="Link to Download Adobe to print Invoice" /> 
+  <attributeSet docName="ChoosePytMethod" windowTitle="Choose Payment Method" text="Open Invoices" comment="Choose Payment Method" /> 
+  <attributeSet docName="PaymentMtd" prompt="Payment Method" /> 
+  <attributeSet docName="BankName" prompt="Bank Name" /> 
+  <attributeSet docName="BankRoutNum" prompt="Bank Routing Number" /> 
+  <!-- START Of Modification By Randeep For Change LSS on 12-JUN-2015 Ver 7.0_1.2 for HPSD#45682 -->
+  <attributeSet docName="CnfrmBankRoutNum" prompt="Confirm Bank Routing Number" /> 
+  <attributeSet docName="CnfrmBankAcctNum" prompt="Confirm Bank Account Number" /> 
+  <attributeSet docName="BankAcctTip" text="Do not use Bank Account info from a deposit slip" /> 
+  <!-- End Of Modification By Randeep For Change LSS on 12-JUN-2015 Ver 7.0_1.2 for HPSD#45682 -->
+  <attributeSet docName="BankAcctNum" prompt="Bank Account Number" /> 
+  <attributeSet docName="CreditCardTyp" prompt="Credit Card Type" /> 
+  <attributeSet docName="ExpirationDt" prompt="Expiration Date" /> 
+  <attributeSet docName="CreditCardNum" prompt="Credit Card Number" /> 
+  <attributeSet docName="CreditCardHoldNam" prompt="Credit Card Holder Name" /> 
+  <attributeSet docName="ContactAgentPageLayoutRN" windowTitle="Contact Agent" title="Contact Agent" text="Contact Agent" comment="Contact Agent Page." /> 
+  <attributeSet docName="SubjectPoplist" prompt="Subject" /> 
+  <attributeSet docName="ContentText" prompt="Message" /> 
+  <attributeSet docName="ContractDetailsPageLayoutRN" windowTitle="Contract Details" title="Contract Details" text="Contract Details" comment="Contract Details Page." /> 
+  <attributeSet docName="MasterLeaseNumber" prompt="MasterLease Number" /> 
+  <attributeSet docName="MasterLeaseStatus" prompt="Status" /> 
+  <attributeSet docName="ApplyBttn" prompt="Apply" /> 
+  <attributeSet docName="CustomerInformation" text="Customer Information" /> 
+  <attributeSet docName="MasterLeaseCustomerName" prompt="Party Name" /> 
+  <attributeSet docName="MasterLeaseCustomerAccount" prompt="Account Number" /> 
+  <attributeSet docName="LegalAddress" prompt="Legal Address" /> 
+  <attributeSet docName="PurchaseOrderNumber" prompt="Purchase Order Number" /> 
+  <attributeSet docName="RentalPeriod" text="Rental Period" /> 
+  <attributeSet docName="ContractGenInfoTerm" prompt="Term" /> 
+  <attributeSet docName="ContractGenInfoLeaseEffectiveDate" prompt="Lease Effective Date" /> 
+  <attributeSet docName="ContractGenInfoAssetSummary" text="Asset Summary" /> 
+  <attributeSet docName="ContractGenInfoItemDescription" prompt="Asset Description" /> 
+  <attributeSet docName="ContractGenInfoManufacturer" prompt="Make" /> 
+  <attributeSet docName="ContractGenInfoModel" prompt="Model" /> 
+  <attributeSet docName="ContractGenInfoSerialNumber" prompt="Serial Number" /> 
+  <attributeSet docName="ContractGenInfoInstallDate" prompt="Install Date" /> 
+  <attributeSet docName="ContractGenInfoInstallLocation" prompt="Install Location" /> 
+  <attributeSet docName="BillingAddrSelectPageLayoutRN" windowTitle="Request Billing Information Change: Select Contract" title="Request Billing Information Change: Select Contract" text="Request Billing Information Change: Select Contract" comment="Request Billing Information Change: Select Contract Page." /> 
+  <attributeSet docName="BillingAddrEntryPageLayoutRN" windowTitle="Request Billing Information Change: Enter Billing Information" title="Request Billing Information Change: Enter Billing Information" text="Request Billing Information Change: Enter Billing Information" comment="Request Billing Information Change: Enter Billing Information Page." /> 
+  <attributeSet docName="BackBttn" prompt="Back" /> 
+  <attributeSet docName="ContinueBttn" prompt="Continue" /> 
+  <attributeSet docName="CreateNewLocationBttn" prompt="Create New Address" /> 
+  <attributeSet docName="FindAssetPageLayoutRN" windowTitle="Update Asset Locaton: Find Asset" title="Update Asset Location: Find Asset" text="Update Asset Location: Find Asset" comment="Update Asset Location: Find Asset Page." /> 
+  <attributeSet docName="UpAssetLocPageLayoutRN" windowTitle="Update Asset Location: Update Location" title="Update Asset Location: Update Location" text="Update Asset Location: Update Location" comment="Update Asset Location: Update Location Page." /> 
+  <attributeSet docName="NewUserCreate" windowTitle="Lessee Online Registration" title="Lessee Online Registration" text="Lessee Online Registration" /> 
+  <attributeSet docName="Submit" prompt="Submit" /> 
+  <attributeSet docName="Continue" prompt="Continue" /> 
+  <attributeSet docName="Back" prompt="Back" /> 
+  <attributeSet docName="ExpirationDate" prompt="Expiration Date" /> 
+  <attributeSet docName="EmailAddress" prompt="Email Address" /> 
+  <attributeSet docName="ReEmailAddress" prompt="Confirm Email Address" /> 
+  <attributeSet docName="AcctNumber" prompt="Customer Account Number" /> 
+  <attributeSet docName="UserName" prompt="User ID" /> 
+  <attributeSet docName="Password" prompt="Password" /> 
+  <attributeSet docName="RePassword" prompt="Confirm Password" /> 
+  <attributeSet docName="Invoice" prompt="Invoice" /> 
+  <attributeSet docName="AmountRemaining" prompt="Amount Remaining" /> 
+  <attributeSet docName="ProcessFeeAmount" prompt="Process Fee Amount" /> 
+  <attributeSet docName="TotalAmount" prompt="Total Amount" /> 
+  <attributeSet docName="DisclaimerVal" text="Please notice payment process fee will be charged." /> 
+  <attributeSet docName="RetrieveUserIdPwd" windowTitle="Retrieve User ID and Password" title="Retrieve User ID and Password" text="Retrieve User ID and Password" /> 
+  <attributeSet docName="AuthorizeAutomaticPayment" windowTitle="Authorize Automatic Payment" title="Authorize Automatic Payment" text="Authorize Automatic Payment" /> 
+  <attributeSet docName="MakePaymentReviewRN" windowTitle="Make Payment: Review" title="Make Payment: Review" text="Make Payment: Review" /> 
+  <attributeSet docName="ChoosePytMethodRN" windowTitle="Choose Payment Method" title="Choose Payment Method" text="Open Invoices" comment="Choose Payment Method" /> 
+  <attributeSet docName="XxdLssHomePageLayoutRN" windowTitle="Customer Self-Service Home" title="Customer Self-Service Home" text="Customer Self-Service Home" comment="Customer Self-Service Home Page." /> 
+  <attributeSet docName="LssContractsTableRN" prompt="Contract Summary" Text="Contract Summary" /> 
+  <attributeSet docName="XxdLssHomeContractNumber" prompt="Contract Number" /> 
+  <attributeSet docName="XxdLssHomeStartDate" prompt="Contract Start Date" /> 
+  <attributeSet docName="XxdLssHomeNextPeriodPayments" prompt="Next Period Payment" /> 
+  <attributeSet docName="XxdLssHomeContractStatus" prompt="Contract Status" /> 
+  <attributeSet docName="XxdLssHomeContractTerm" prompt="Contract Term" /> 
+  <attributeSet docName="XxdLssHomePaymentFrequency" prompt="Payment Frequency" /> 
+  <attributeSet docName="XxdLssHomePurchaseOptionType" prompt="Purchase Option Type" /> 
+  <attributeSet docName="XxdLssHomePaymentsRemaining" prompt="Min. Payments Remaining" /> 
+  <attributeSet docName="XxdLssHomeViewDetails" prompt="View Contract Document" /> 
+  <attributeSet docName="XxdLssHomeXxdLssHomeTip" text="Some fees and services may not be included." /> 
+  <attributeSet docName="CustomerSelfServiceCenter" text="Customer Self Service Center" /> 
+  <attributeSet docName="BillToAddress" prompt="Bill To Address" shortDesc="Bill To Address" /> 
+  <attributeSet docName="AcctHistPageLayoutRN" windowTitle="Account History" title="Account History" text="Account History" comment="Account History Page." /> 
+  <attributeSet docName="UsagePageLayoutRN" windowTitle="Usage History" title="Usage History" text="Usage History" comment="Usage History Page." /> 
+  <attributeSet docName="AcctHistTableRN" text="Account History" /> 
+  <attributeSet docName="InvoiceDueDate" prompt="Invoice Due Date" shortDesc="Invoice Due Date" /> 
+  <attributeSet docName="InvoiceNumber" text="Invoice Number" prompt="Invoice Number" shortDesc="Invoice Number" /> 
+  <attributeSet docName="InvoiceAmount" prompt="Invoice Amount" shortDesc="Invoice Amount" /> 
+  <attributeSet docName="PaymentDate" prompt="Payment Date" shortDesc="Payment Date" /> 
+  <attributeSet docName="ReceiptNumber" prompt="Receipt Number" shortDesc="Receipt Number" /> 
+  <attributeSet docName="EndingBalance" prompt="Ending Balance" shortDesc="Ending Balance" /> 
+  <attributeSet docName="PrintableView" prompt="Printable View" shortDesc="Select to view a printable version of this page." /> 
+  <attributeSet docName="AdobeLink" text="Link to Download Adobe Reader to print Invoices" /> 
+  <attributeSet docName="UsageHistoryTableRN" text="Usage History" /> 
+  <attributeSet docName="LastReadingDate" prompt="Last Reading Date" shortDesc="Last Reading Date" /> 
+  <attributeSet docName="LastReading" prompt="Last Reading" shortDesc="Last Reading" /> 
+  <attributeSet docName="ReadDueDate" prompt="Next Read Due Date" shortDesc="Next Read Due Date" /> 
+- <!--  Start of modification by Vishwas Balakrishna as part of LINK defect Id 3887 dated 03-Apr-2007 version no.1.35 
+  --> 
+  <attributeSet docName="ProdBranding" text="Customer Self-Service Center" /> 
+- <!--  End of modification by Vishwas Balakrishna as part of LINK defect Id 3887 dated 03-Apr-2007 version no.1.35 
+  --> 
+- <!--  Start of modification by Vasudeva Murthy as part of LINK defect Id 3952 dated 05-Apr-2007 version no.1.38 
+  --> 
+  <attributeSet docName="GoText" prompt="Please enter your search criteria and select the Go button to see the result. Note that the search is case insensitive." text="Please enter your search criteria and select the Go button to see the result. Note that the search is case insensitive." /> 
+- <!--  End of modification by Vasudeva Murthy  as part of LINK defect Id 3952 dated 05-Apr-2007 version no.1.38 
+  --> 
+- <!--  Attribute Sets added for Gap 58 End
+  --> 
+- <!--  Start of modification by Vasudeva Murthy as part of LINK defect Id 4385 dated 27-Apr-2007 version no.1.41 
+  --> 
+  <attributeSet docName="SetFutPayment" prompt="Automatic Future Payment" /> 
+  <attributeSet docName="BankAcctHoldName" prompt="Bank Account Holder Name" /> 
+  <attributeSet docName="BankAcctType" prompt="Account Type" /> 
+- <!--  End of modification by Vasudeva Murthy as part of LINK defect Id 4385 dated 27-Apr-2007 version no.1.41 
+  --> 
+- <!--  Start of modification by Vasudeva Murthy as part of LINK defect Id 4385 dated 27-Apr-2007 version no.1.42 
+  --> 
+  <attributeSet docName="AutoFutTip" text="Automatic Future Payment will waive payment processing fee." /> 
+- <!--  End of modification by Vasudeva Murthy as part of LINK defect Id 4385 dated 27-Apr-2007 version no.1.42 
+  --> 
+- <!--  Start of Modification by Vishwas Balakrishna as part of LINK Defect Id 5501 dated 13-Jun-2007 version no.1.43 
+  --> 
+  <attributeSet docName="SalesTaxJrnlTrans" windowTitle="Sales Tax Journal Transactions" title="Sales Tax Journal Transactions" text="Sales Tax Journal Transactions" comment="Sales Tax Journal Transactions Page." /> 
+  <attributeSet docName="LineName" prompt="Line Name" shortDesc="Line Name" /> 
+  <attributeSet docName="TaxDateFrom" prompt="Tax Date From" shortDesc="Tax Date From" /> 
+  <attributeSet docName="TaxDateTo" prompt="Tax Date To" shortDesc="Tax Date To" /> 
+  <attributeSet docName="RequestReason" prompt="Request Reason" shortDesc="Request Reason" /> 
+  <attributeSet docName="TaxDate" prompt="Tax Date" shortDesc="Tax Date" /> 
+  <attributeSet docName="TaxRate" prompt="Tax Rate" shortDesc="Tax Rate" /> 
+  <attributeSet docName="TaxAmount" prompt="Tax Amount" shortDesc="Tax Amount" /> 
+  <!-- START Of Modification By Bhupinder For Change #15334 Dated 29-NOV-2011 version REL_2.2_1.5 -->
+  <!--<attributeSet docName="CumulativeTaxAmount" prompt="Cumulative Tax Amount" shortDesc="Cumulative Tax Amount" /> -->
+  <!-- START Of Modification By Bhupinder For Change #21529 Dated 02-JULY-2012 version REL_3.0_1.5 -->
+  <!--<attributeSet docName="CumulativeTaxAmount" prompt="Revenue Billed To Date" shortDesc="Revenue Billed To Date" /> -->
+  <attributeSet docName="CumulativeTaxAmount" prompt="Cumulative Tax Amount" shortDesc="Cumulative Tax Amount" />
+  <!-- END Of Modification By Bhupinder For Change #21529 Dated 02-JULY-2012 version REL_3.0_1.5 --> 
+  <!-- END Of Modification By Bhupinder For Change #15334 Dated 29-NOV-2011 version REL_2.2_1.5 --> 
+  <!-- START Of Modification By Anandam For MQC 102171 dated 07-May-2014 version Rel7.6_1.1 -->
+  <attributeSet docName="RevenueBilledToDate" prompt="Revenue Billed To Date" shortDesc="Revenue Billed amount till date" />
+  <!-- END Of Modification By Anandam For MQC 102171 dated 07-May-2014 version Rel7.6_1.1 -->
+  <attributeSet docName="JurisdictionNameT" prompt="Jurisdiction Name" shortDesc="Jurisdiction Name" /> 
+  <attributeSet docName="JurisdictionLevelT" prompt="Jurisdiction Level" shortDesc="Jurisdiction Level" /> 
+- <!--  End of Modification by Vishwas Balakrishna as part of LINK Defect Id 5501 dated 13-Jun-2007 version no.1.43 
+  --> 
+- <!--  Start of Modification by Rishi Agrawal as part of CR 5166 dated 22-Jun-2007 version no.1.44 
+  --> 
+  <attributeSet docName="BidQuantity" prompt="Bid Quantity" shortDesc="Bid Quantity" /> 
+  <attributeSet docName="AvailableQuantity" prompt="Available Quantity" shortDesc="Available Quantity" /> 
+  <attributeSet docName="AssetListIdentifier" prompt="Asset List Identifier" shortDesc="Asset List Identifier" /> 
+- <!--  End of Modification by Rishi Agrawal as part of CR 5166 dated 22-Jun-2007 version no.1.44 
+  --> 
+- <!--  Start of Modification by Vasudeva Murthy as part of CR 5687 dated 30-Aug-2007 version no.1.48 
+  --> 
+  <attributeSet docName="validationComment" prompt="Validation Comment" description="Validation Comment" text="Validation Comment" /> 
+  <attributeSet docName="Accept" prompt="Accept" /> 
+- <!--  End of Modification by Vasudeva Murthy as part of CR 5687 dated 30-Aug-2007 version no.1.48 
+  --> 
+  <attributeSet docName="AssetLineDesc" prompt="Line Description" shortDesc="Line Description" /> 
+  <attributeSet docName="MaxTaxIndicator" prompt="Max Tax Indicator" shortDesc="Max Tax Indicator" /> 
+  <attributeSet docName="TaxableAmount" prompt="Taxable Amount" shortDesc="Taxable Amount" /> 
+  <attributeSet docName="TaxPaymentType" prompt="Tax Payment Type" shortDesc="Tax Payment Type" /> 
+  <attributeSet docName="TransactionDate" prompt="Transaction Date" shortDesc="Transaction Date" /> 
+  <attributeSet docName="TransactionNumber" prompt="Transaction Number" shortDesc="Transaction Number" /> 
+  <attributeSet docName="RequestType" prompt="Request Type" shortDesc="Request Type" /> 
+- <!--  Start of Modification by Alex flamin as part of CR 8060
+  --> 
+  <attributeSet docName="QuoteCreator" prompt="Created By" description="Created By" text="Created By" /> 
+- <!--  End of Modification by Alex Flamin as part of CR 8060
+  --> 
+- <!--  Start of Modification by Uma as part of incident  12232
+  --> 
+  <attributeSet docName="ProdName" prompt="Product Name" shortDesc="Product Name" /> 
+- <!--  End of Modification byUma as part of incident  12232
+  --> 
+- <!--  Start of Modification by Vasudeva Murthy as part of incident  133229
+  --> 
+  <attributeSet docName="ConfirmationRN" windowTitle="Confirmation" title="Confirmation" text="Confirmation" /> 
+- <!--  End of Modification by Vasudeva Murthy as part of incident  13229
+  --> 
+- <!--  Start of Modification by Vishwas Balakrishna as part of LINK Defect Id 22208 dated 23-Oct-2008 version no.1.54 
+  --> 
+  <attributeSet docName="DocGenErrorReport" windowTitle="Document Generation Error Report" title="Document Generation Error Report" text="Document Generation Error Report" comment="Document Generation Error Report Page." /> 
+  <attributeSet docName="JobNumber" prompt="Job Number" shortDesc="Job Number" /> 
+  <attributeSet docName="DocumentType" prompt="Document Type" shortDesc="Document Type" /> 
+  <attributeSet docName="NoOfDocuments" prompt="Number of Documents" shortDesc="Number of Documents" /> 
+  <attributeSet docName="DateCreated" prompt="Date Created" shortDesc="Date Created" /> 
+  <attributeSet docName="RequestNumber" prompt="Request Number" shortDesc="Request Number" /> 
+- <!--  End of Modification by Vishwas Balakrishna as part of LINK Defect Id 22208 dated 23-Oct-2008 version no.1.54 
+  --> 
+- <!--  Start of Modification by Vishwas Balakrishna as part of HPCM 3591 dated 19-Mar-2009 version no.1.55 
+  --> 
+  <attributeSet docName="PartyNumber" prompt="Party Number" shortDesc="Party Number" /> 
+  <attributeSet docName="Address" prompt="Address" shortDesc="Address" /> 
+- <!--  End of Modification by Vishwas Balakrishna as part of HPCM 3591 dated 19-Mar-2009 version no.1.55 
+  --> 
+- <!--  Start of Modification by Deepa Murthy for R2 Gap 83 dated 13-Oct-2009 Version 1.55.1.1 
+  --> 
+  <attributeSet docName="FairMrktValue" prompt="Fair Market Value" shortDesc="Fair Market Value" /> 
+- <!--  End of Modification by Deepa Murthy for R2 Gap 83 dated 13-Oct-2009 Version 1.55.1.1 
+  --> 
+- <!--  Start of Modification by Deepa Murthy for R2 Gap 61.02 dated 11-Nov-2009 Version 1.55.1.2 
+  --> 
+  <attributeSet docName="ReceiptMethod" prompt="Receipt Method" shortDesc="Receipt Method" /> 
+  <attributeSet docName="BankAccount" prompt="Bank Account" shortDesc="Bank Account" /> 
+- <!--  End of Modification by Deepa Murthy for R2 Gap 61.02 dated 11-Nov-2009 Version 1.55.1.2  
+  --> 
+- <!--  Start of Modification by Vasudeva as part of HPCM 4260 dated 28-Mar-2009 version no.1.56 
+  --> 
+  <attributeSet docName="FailedDueTo" prompt="Failed Due To" shortDesc="Failed Due To" /> 
+- <!--  End of Modification by Vasudeva as part of HPCM 4260 dated 28-Mar-2009 version no.1.56 
+  --> 
+   <!-- Start of Modification by Nikhil Shah as part of HPSD 11538 dated 29-JUL-2010 version no. 2.1 -->
+   <attributeSet docName="InvoiceAmountTip" text="Do not enter dollar sign $ or comma"/>
+   <attributeSet docName="PasswordTip" text="1. Must be at least eight characters long&lt;BR>2. Must contain at least one English uppercase character&lt;BR>3. Must contain one numeral (0 through 9)&lt;BR>4. Must contain one English lowercase character or a symbol (!#$+-&lt;= >?_)&lt;BR>5. Cannot have consecutive repeating characters ex. RR,11,##"/>
+   <!-- Start of Modification by Nikhil Shah as part of HPSD 12652 dated 10-May-2011 version Rel1.4.5_1.1 -->
+   <attributeSet docName="KhrTip" text="Please enter either contract number or invoice number."/>
+   <!-- End of Modification by Nikhil Shah as part of HPSD 12652 dated 10-May-2011 version Rel1.4.5_1.1 -->
+   <!-- Start of Modification by Ashwani Braj as part of HPSD 16655 dated 19-May-2011 version Rel1.4.5_1.2 -->
+   <attributeSet docName="ManBillDueDateFrom" prompt="Due Date From" shortDesc="Due Date From" />
+   <attributeSet docName="ManBillDueDateTo" prompt="Due Date To" shortDesc="Due Date To" />
+   <attributeSet docName="ManBillDueDate" prompt="Due Date" shortDesc="Due Date" />
+   <!-- End of Modification by Ashwani Braj as part of HPSD 16655 dated 19-May-2011 version Rel1.4.5_1.2 -->
+   <!-- Start of Modification by vasu as part of Loanpath Defect 60212 dated 20-May-2011 version REL_2.2_1.2 --> 
+<attributeSet docName="AmountAllocated" comment="Amount Allocated" dataType="VARCHAR2" maximumLength="100" prompt="Amount Allocated" required="no"/>
+  <attributeSet docName="BalanceDue" comment="Balance Due" dataType="VARCHAR2" maximumLength="100" prompt="Balance Due" required="no"/>
+  <!--  Attribute Sets added for Gap10 Addendum END --> 
+  <!--  Attribute Sets added for GAP097 Addendum - Litigation and Recovery Functionality Start --> 
+  <attributeSet docName="LoggedDate" comment="Logged Date" dataType="VARCHAR2" maximumLength="100" prompt="Logged Date" required="no"/>
+  <attributeSet docName="ActionDate" comment="Action Date" dataType="VARCHAR2" maximumLength="100" prompt="Action Date" required="no"/>
+  <attributeSet docName="ActionCode" comment="Action Code" dataType="VARCHAR2" maximumLength="100" prompt="Action Code" required="no"/>
+  <attributeSet docName="ActionCodeDesc" comment="Amount Allocated" dataType="VARCHAR2" maximumLength="100" prompt="Action Code Description" required="no"/>
+  <attributeSet docName="Comments" comment="Comments" dataType="VARCHAR2" maximumLength="100" prompt="Comments" required="no"/>
+  <attributeSet docName="ActionOwner" comment="Action Owner" dataType="VARCHAR2" maximumLength="100" prompt="Action Owner" required="no"/>
+  <attributeSet docName="AmountValue" comment="Amount Value" dataType="VARCHAR2" maximumLength="100" prompt="Amount Value" required="no"/>
+  <attributeSet docName="TextValue" comment="Text Value" dataType="VARCHAR2" maximumLength="100" prompt="Text Value" required="no"/>
+  <attributeSet docName="DateValue" comment="Date Value" dataType="VARCHAR2" maximumLength="100" prompt="Date Value" required="no"/>
+  <attributeSet docName="DelinquencyCode" comment="Delinquency Code" dataType="VARCHAR2" maximumLength="100" prompt="Delinquency Code" required="no"/>
+  <attributeSet docName="ErrorLog" comment="Error Log" dataType="VARCHAR2" maximumLength="100" prompt="Error Log" required="no"/>
+  <attributeSet docName="TotalNumRows" comment="TotalNumRows" dataType="VARCHAR2" maximumLength="100" prompt="Total Number of Records :" required="no"/>
+  <attributeSet docName="SuccessRec" comment="SuccessRec" dataType="VARCHAR2" maximumLength="100" prompt="No of Success Records :" required="no"/>
+  <attributeSet docName="FailedRec" comment="FailedRec" dataType="VARCHAR2" maximumLength="100" prompt="No of Failed Records :" required="no"/>
+  <attributeSet docName="SelectAll" comment="SelectAll" dataType="VARCHAR2" maximumLength="100" prompt="Select All" required="no"/>
+  <attributeSet docName="ClearAll" comment="ClearAll" dataType="VARCHAR2" maximumLength="100" prompt="Clear All" required="no"/>
+  <attributeSet docName="Uploadid" comment="Uploadid" dataType="VARCHAR2" maximumLength="100" prompt="Upload Id :" required="no"/>
+  <attributeSet docName="Filename" comment="Filename" dataType="VARCHAR2" maximumLength="100" prompt="Filename :" required="no"/>
+  <attributeSet docName="UploadDate" comment="UploadDate" dataType="VARCHAR2" maximumLength="100" prompt="Uploaded Date :" required="no"/>
+  <attributeSet docName="UploadNewFile" comment="UploadNewFile" dataType="VARCHAR2" maximumLength="100" prompt="Upload New File" required="no"/>
+  <attributeSet docName="FileStatus" comment="FileStatus" dataType="VARCHAR2" maximumLength="100" prompt="File Status" required="no"/>
+  <attributeSet docName="ErrorMessage" comment="ErrorMessage" dataType="VARCHAR2" maximumLength="100" prompt="Error Message" required="no"/>
+  <attributeSet docName="DetailPage" comment="DetailPage" dataType="VARCHAR2" maximumLength="100" prompt="Return to Contract Detail Page" required="no"/>
+     
+   <!-- End   of Modification by vasu as part of Loanpath Defect 60212 dated 20-May-2011 version REL_2.2_1.2 -->  
+  </package>
